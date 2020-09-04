@@ -1,5 +1,5 @@
 <?php
-
+ 
 class Manager{
     // (attributs) attributes
     public $_db;
@@ -13,9 +13,9 @@ class Manager{
         $this->_db = $bdd;
     }
     // (accesseurs) getters pour récupéré les attributs
-
+ 
     // (mutateurs) setters pour modifier les attributs
-
+ 
     // (méthdes) methods
     //SELECT
     public function select($firstname){
@@ -26,7 +26,7 @@ class Manager{
         // echo '<pre>';
         //     print_r($fetch);
         // echo '</pre>';
-
+ 
         //CONSTRUIRE UN OBJET Learner
         $learner = new Learner();
         $learner ->hydrate($fetch);
@@ -51,7 +51,7 @@ class Manager{
     }
     //UPDATE
     public function update(){
-
+ 
     }
     //DELETE
     //LIST OF LEARNER LESS THAN 25

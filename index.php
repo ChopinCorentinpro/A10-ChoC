@@ -4,16 +4,16 @@
 <?php require_once "./classes/Learner.class.php"; ?>
 <!-- INCLUDE MANAGER -->
 <?php require_once "./classes/Manager.class.php"; ?>
-
+ 
 <!DOCTYPE html>
 <html lang="fr">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - POO</title>
 </head>
-
+ 
 <body>
     <?php
         $value1 = "corentin";
@@ -27,27 +27,27 @@
         $firstname= $learner->getFirstName();
         $learner->setFirstName('Ceci');
         $firstname_set = $learner->getFirstName();
-
+ 
         //FOR LAST NAME
         $lastname = $learner->getLastName();
         $learner->setLastName('test');
         $lastname_set = $learner->getLastName();
-
+ 
         //FOR AGE
         $age = $learner->getAge();
         $learner->setAge(23);
         $age_set = $learner->getAge();
-
+ 
         //FOR SIZE
         $size = $learner->getSize();
         $learner->setSize('1.58');
         $size_set = $learner->getSize();
-
+ 
         //FOR STATUS
         $status = $learner->getStatus();
         $learner->setStatus('formateur');
         $status_set = $learner->getStatus();
-
+ 
         //ECHO FOR ALL ATTRIBUTES
         echo '<h2>LIST OF ALL ATTRIBUTES</h2>';
         echo $firstname.'<Br>';
@@ -117,7 +117,7 @@
         echo '</ul>';
         echo '<h2>RECUP DB VIA Manager OBJECT</h2>';
         // $tab = ['firstname' => 'Iron-man'];
-
+ 
         $manager = new Manager($db);
         $learner = $manager->select('corentin');
         
@@ -126,7 +126,7 @@
         $learner1 = $manager->select('corentin');
         $learner2 = $manager->select('guillaume');
         $learner3 = $manager->select('nicolas');
-
+ 
         $learner1->describe();
         echo '<br>';
         $learner2->describe();
